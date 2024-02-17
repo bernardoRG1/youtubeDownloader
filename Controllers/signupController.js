@@ -1,5 +1,5 @@
 import LinkModel from "../Models/usersModel.js";
-import bcrypt from 'bcrypt'
+
 
 const userModel = new LinkModel();
 export const signupGET = (req, res) => {
@@ -14,9 +14,8 @@ export const signupPOST = async (req, res) => {
                throw new Error('El correo electrónico ya está registrado');
          }
 
-         const hashedPassword = await bcrypt.hash(password, 10);
 
-         const newUser = await userModel.createUser(name, email, hashedPassword);
+         const newUser = await userModel.createUser(name, email, password);
 
          res.redirect('/login')
       } catch (error) {

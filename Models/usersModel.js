@@ -1,12 +1,11 @@
 import pool from '../database.js';
 import { promisify } from 'util';
-import bcrypt from 'bcrypt'
 
 class LinkModel {
       constructor() {}
 
       async createUser(name, email, passwordHash) {
-         try {
+           try {
                const query = 'INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)';
                const result = await pool.query(query, [name, email, passwordHash]);
                return result.insertId; // Retorna el ID del usuario insertado

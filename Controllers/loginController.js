@@ -1,5 +1,4 @@
 import  jwt  from "jsonwebtoken";
-import bcrypt from 'bcrypt'
 import LinkModel from "../Models/usersModel.js";
 import { generateAccessToken } from "../authenticateToken.js";
 
@@ -16,12 +15,12 @@ export const loginPOST = async (req, res) => {
    try {
       const user = await userModel.findUserByEmail(email);
       if (!user) {
-         throw new Error('El correo electrónico ya está registrado');
+         throw new Error('No existe tu cuenta');
       }
 
-      const isPasswordValid = await bcrypt.compare(password, user.password_hash);
-      if (!isPasswordValid) {
-         throw new Error('La contraseña es incorrecta');
+
+      if (password !== user.password_hash) {
+         throw new Error(`${password} AND ${user.password}`);
       }
 
       const userToken = {email : email, password : password, id : user.id}
