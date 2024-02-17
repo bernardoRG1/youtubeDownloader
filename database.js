@@ -4,10 +4,11 @@ import { config } from 'dotenv';
 config()
 const keys = {
    database : {
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      database: process.env.DB_NAME,
-      port: process.env.DB_PORT 
+      host: process.env.MYSQL_ADDON_HOST,
+      user: process.env.MYSQL_ADDON_USER,
+      password : process.env.MYSQL_ADDON_PASSWORD,
+      database: process.env.MYSQL_ADDON_DB,
+      port: process.env.MYSQL_ADDON_PORT 
    }
 }
 
