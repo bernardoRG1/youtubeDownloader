@@ -7,7 +7,7 @@ const model = new searchVideo()
 export const linksGET = async (req, res) => {
    try {
       
-       const links = await pool.query('SELECT * from linksurl;');
+       const links = await pool.query('SELECT * from linksUrl;');
       const token =  req.cookies.token;
    if(token) {
       res.render('links', {isAuthenticated: true, videos : links });
@@ -48,7 +48,7 @@ export const addVideoPOST = async (req, res) => {
       
       })
       const data = await model.getData(url);
-      const addVideo = await pool.query(` INSERT INTO linksurl (user_id, url, titulo, iframurl, duracion) VALUES (?, ?, ?, ?, ?)`, [userId, url, data.title, data.iframeUrl, data.duration ]);
+      const addVideo = await pool.query(` INSERT INTO linksUrl (user_id, url, titulo, iframurl, duracion) VALUES (?, ?, ?, ?, ?)`, [userId, url, data.title, data.iframeUrl, data.duration ]);
       res.redirect("/links")
    } catch (error) {
       console.log(error)
