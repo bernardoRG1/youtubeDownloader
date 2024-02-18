@@ -20,6 +20,7 @@
     "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
+    "streaming-s3": "^0.4.5",
     "url": "^0.11.3",
     "ytdl-core": "^4.11.5"
   },
