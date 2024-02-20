@@ -19,17 +19,9 @@ Esta API en Express permite descargar videos de YouTube y guardar enlaces. Es im
 ## Instalación
 
 1. Clona este repositorio en tu máquina local.
-2. Ejecuta `npm install` para instalar las dependencias necesarias.
-3. Crea un archivo `.env` en la raíz del proyecto y configura las variables de entorno necesarias, como la conexión a la base de datos y las claves secretas para JWT.
+2. Descomentar las siguientes lineas
+3. Ejecuta `npm install` para instalar las dependencias necesarias.
 4. Ejecuta `npm run dev` para iniciar el servidor local.
-
-## Endpoints Disponibles
-
-- **GET /videos**: Obtiene todos los enlaces de videos guardados en la base de datos.
-- **POST /videos**: Guarda un nuevo enlace de video en la base de datos.
-- **GET /videos/:id**: Obtiene un enlace de video específico por su ID.
-- **PUT /videos/:id**: Actualiza un enlace de video existente.
-- **DELETE /videos/:id**: Elimina un enlace de video existente.
 
 ## Próxima Actualización
 
