@@ -30,7 +30,7 @@ export const downloadPOST = async (req, res) => {
    try {
 
       const download = await model.gettDownload(link, type)
-      
+      res.render('download')
       
       
    } catch (error) {
