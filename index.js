@@ -30,6 +30,9 @@ app.use('/login', loginRoutes);
 app.use('/signup', signUpRoutes);
 app.use('/delete', deleteRoutes)
 
+app.get("/info", (req, res) => {
+   res.render('info')
+})
 
 
 app.get('/' ,(req, res) => {

@@ -1,0 +1,30 @@
+<div class="max-w-3xl mx-auto mt-[100px]">
+        <h1 class="text-3xl font-bold mb-4">API para Descargar Videos de YouTube</h1>
+        <p class="mb-6">Esta API en Express permite descargar videos de YouTube y guardar enlaces. Es importante tener en cuenta que para el funcionamiento de las descargas es necesario descargar el API y ejecutarla en un servidor local.</p>
+
+        <h2 class="text-xl font-bold mb-2">Tecnologías Utilizadas</h2>
+        <ul class="list-disc pl-6 mb-6">
+            <li><strong>Node.js</strong>: Plataforma de desarrollo para construir aplicaciones del lado del servidor utilizando JavaScript.</li>
+            <li><strong>Express.js</strong>: Framework web de Node.js utilizado para construir la API.</li>
+            <li><strong>JWT (JSON Web Tokens)</strong>: Utilizado para la autenticación y autorización de usuarios.</li>
+            <li><strong>SQL (MySQL)</strong>: Base de datos relacional utilizada para almacenar los enlaces de los videos.</li>
+            <li><strong>Fluent-FFmpeg</strong>: Utilizado para manejar la conversión de videos.</li>
+            <li><strong>dotenv</strong>: Módulo utilizado para cargar variables de entorno desde un archivo .env.</li>
+            <li><strong>body-parser</strong>: Middleware utilizado para analizar los cuerpos de las solicitudes HTTP.</li>
+            <li><strong>cookie-parser</strong>: Middleware utilizado para analizar cookies en las solicitudes HTTP.</li>
+            <li><strong>Streaming-S3</strong>: Utilizado para la integración con el servicio de almacenamiento en la nube Amazon S3.</li>
+            <li><strong>ytdl-core</strong>: Módulo utilizado para descargar videos de YouTube.</li>
+            <li><strong>Nodemon</strong>: Herramienta utilizada en el entorno de desarrollo para reiniciar automáticamente el servidor cuando se detectan cambios en los archivos.</li>
+        </ul>
+
+        <h2 class="text-xl font-bold mb-2">Instalación</h2>
+        <ol class="list-decimal pl-6 mb-6">
+            <li>Clona este repositorio en tu máquina local.</li>
+            <li>Descomenta las siguientes líneas.</li>
+            <li>Ejecuta <code class="bg-gray-200 px-1">npm install</code> para instalar las dependencias necesarias.</li>
+            <li>Ejecuta <code class="bg-gray-200 px-1">npm run dev</code> para iniciar el servidor local.</li>
+        </ol>
+
+        <h2 class="text-xl font-bold mb-2">Próxima Actualización</h2>
+        <p class="mb-6">En la próxima actualización, se planea agregar la funcionalidad para conectar la API a un bucket de Amazon S3. Esto permitirá que los usuarios descarguen los videos directamente desde la página web a sus dispositivos locales.</p>
+    </div>

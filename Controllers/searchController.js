@@ -28,10 +28,10 @@ export const searchPOST = async (req, res) => {
 export const downloadPOST = async (req, res) => {
    const { type, link } = req.body;
    try {
-      /*
+      
       const download = await model.gettDownload(link, type)
       res.render('download')
-      */
+      
       throw new Error("error")
       
    } catch (error) {
