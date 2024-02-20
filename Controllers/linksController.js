@@ -51,7 +51,8 @@ export const addVideoPOST = async (req, res) => {
       })
       const data = await model.getData(url);
       const addVideo = await linkModel.createLink(userId, url, data)
-     
+   
+
       res.redirect("/links")
    } catch (error) {
       console.log(error)
