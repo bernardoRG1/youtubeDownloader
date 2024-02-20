@@ -31,7 +31,7 @@ export const downloadPOST = async (req, res) => {
 
       const download = await model.gettDownload(link, type)
       res.render('download')
-      
+
       
    } catch (error) {
       res.render('download', {error: true, message : "ERROR AL DESCARGAR"})
