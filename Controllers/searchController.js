@@ -27,6 +27,10 @@ export const searchPOST = async (req, res) => {
 
 export const downloadPOST = async (req, res) => {
    const { type, link } = req.body;
-   await model.gettDownload(link, type)
-   res.render('download', {typeText : type});
+   try {
+      await model.gettDownload(link, type)
+      res.render('download', {typeText : type});
+   } catch (error) {
+      res.render('download', {error: true, message : "ERROR AL DESCARGAR"})
+   }
 }

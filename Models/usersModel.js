@@ -15,11 +15,10 @@ class LinkModel {
          }
       }
 
-      async createLink(userId, url) {
+      async createLink(userId, url, data) {
          try {
-               const query = 'INSERT INTO linksUrl (user_id, url) VALUES (?, ?)';
-               const result = await pool.query(query, [userId, url]);
-               return result.insertId; // Retorna el ID del enlace insertado
+            const addVideo = await pool.query(` INSERT INTO linksUrl (user_id, url, titulo, iframurl, duracion) VALUES (?, ?, ?, ?, ?)`, [userId, url, data.title, data.iframeUrl, data.duration ]);
+            return;
          } catch (error) {
                console.error('Error al crear el enlace:', error);
                throw error;

@@ -15,7 +15,7 @@ export const deletePOST = async (req, res) => {
       
       })
       console.log(url)
-      const deleteVideo = await pool.query(`DELETE FROM linksurl WHERE user_id = ? AND url = ?`, [userId, url]);
+      const deleteVideo = await pool.query(`DELETE FROM linksUrl WHERE user_id = ? AND url = ?`, [userId, url]);
       res.redirect("/links")
    } catch (error) {
       console.log(error)
